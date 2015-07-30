@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-docker rm -f $(docker ps -q)
+docker rm -f $(docker ps -lq)
