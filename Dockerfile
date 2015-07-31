@@ -8,7 +8,7 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 	ln -s /opt/jdk1.8.0_45 /opt/java 
 ENV JAVA_HOME /opt/java 
 ENV PATH /opt/java/bin:$PATH
-RUN yum -y install jq docker
+RUN yum -y install jq docker openssh-clients
 RUN mv /usr/bin/docker /usr/bin/dock.$(date +"%Y%m%d_%H%M%S") && \
 	wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker && \
 	chmod +x /usr/bin/docker
